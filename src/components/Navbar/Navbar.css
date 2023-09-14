@@ -1,0 +1,107 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    width: 99vw;
+    z-index: 100;
+}
+.navbar h1{
+    color: aqua;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+ul{
+    display: flex;
+    justify-content: center;  
+    transition: 0.3s;    
+}
+li{
+    list-style: none;
+    padding: 0 15px;    
+}
+.link ul li .logout{
+    background-color: red;
+}
+.link ul li button{
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    background-color: rgb(88, 115, 235);
+    border-radius: 5px;
+}
+.toggle{
+    display: none;
+    transition: 0.3s;
+}
+
+@media (max-width:700px) {
+    
+    .link ul{
+        flex-direction: column;
+        background-color: rgba(117, 0, 0, 0.445);
+        position: absolute;
+        left: -200%; 
+        top: 0;
+        width: 100%;
+        padding-top: 50px;
+        z-index: 200;
+    }
+    .link ul.active{
+        left: 0;
+    }
+    .toggle{
+        display: flex;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        top: 10px;
+        right: 25px;
+        z-index: 100;
+    }
+    .toggle span{
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background-color: white;
+        transition: 0.3s;
+    }
+    .toggle span::after,
+    .toggle span::before    {
+        position: absolute;
+        width: 32px;
+        height: 100%;
+        content: "";
+        background-color: #fff;
+        transition: 0.3s;
+        left: 0;
+    }
+    .toggle span::after{
+        top: 10px;
+    }
+    .toggle span::before{
+        top: -10px;
+    }
+    .toggle.active span{
+        background-color: transparent;
+    }
+    .toggle.active span::after{
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .toggle.active span::before{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}

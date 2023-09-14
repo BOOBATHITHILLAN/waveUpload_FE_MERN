@@ -1,0 +1,60 @@
+.home {
+  min-height: 100vh;
+  width: 100%;
+  border-radius: 10px;
+  z-index: 100;
+}
+.videocontainer {
+  margin: 15px 10px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: none;
+}
+.videodiv {
+  background-color: aqua;
+  width: 45%;
+  border: 1px solid lightgray;
+}
+.videocontrol {
+  width: 100%;
+}
+.videoheader {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.videoheader h4 {
+  padding-left: 20px;
+  font-size: 1.5rem;
+}
+.videoheader p {
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+}
+.videodescription {
+  font-size: 1.5rem;
+  text-align: start;
+  padding-left: 20px;
+  color: rgb(6, 1, 12);
+}
+.videodescription span {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .videocontainer {
+    flex-direction: column;
+  }
+  .videodiv {
+    width: 80%;    
+  }
+}
