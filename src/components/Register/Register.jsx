@@ -3,6 +3,7 @@ import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { Formik } from "formik";
+import axios from "axios";
 
 const registerSchema = yup.object().shape({
   name: yup.string().required("*Required"),
